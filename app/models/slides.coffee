@@ -8,6 +8,7 @@ slides = [
   "Simple Animations"
   "Resuable Components"
   "Measured Box Demo"
+  "Growing Box Demo"
 ]
 
 Slide = Ember.Object.extend

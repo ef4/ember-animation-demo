@@ -74,7 +74,7 @@ button { min-width: 7em }
 
 input[type="text"], textarea, input[type="password"] { 
     width: 100%; 
-    @extend .border-box;
+    box-sizing: border-box;
 }
 
 input[type="text"], textarea, select, input[type="password"] {
@@ -97,14 +97,14 @@ input[type="text"], select, input[type="password"] {
 .compact {
     float: left;
     padding-right: 0.5em;
-    @extend .border-box;
+    box-sizing: border-box;
 }
 
 .half {
     float: left;
     width: 50%;
     padding-right: 0.5em;
-    @extend .border-box;
+    box-sizing: border-box;
 }
 
 .half + .half, .half + script + .half {

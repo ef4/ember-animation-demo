@@ -4,7 +4,7 @@
 @import "flex";
 @import "typography";
 @import "button";
-
+@import "clearfix";
 
 html, body {
     padding: 0;
@@ -93,4 +93,8 @@ html, body {
     .height-display {
 	font-size: 6em;
     }
+}
+
+button.del {
+    margin-top: 1.5em;
 }

@@ -1,0 +1,24 @@
+<h2>Welcome to Shady's Skydiving Service</h2>
+
+<label>Please list your next of kin... just in case.</label>
+  {{#growing-box}}
+    {{#each contacts}}
+      <div class="clearfix">
+	<div class="compact">
+	  <label>Name</label>
+	  {{input value=name}}
+	</div>
+	<div class="compact">
+	  <label>Phone</label>
+	  {{input value=phone}}
+	</div>
+	<button class="del" {{action "deleteContact" this}}>Delete</button>
+      </div>
+    {{/each}}
+  {{/growing-box}}
+
+<div class="clearfix"></div>
+<button {{action "addContact"}}>Add Another</button>
+
+
+

@@ -1,8 +1,8 @@
-GrowableBox = Ember.Component.extend
+GrowingBox = Ember.Component.extend
   transition: 'height 250ms ease-out'
   animateAtInsertion: false
 
-  layoutName: 'growable-layout'
+  layoutName: 'growing-box-layout'
 
   didInsertElement: ->
     @_super()
@@ -10,10 +10,10 @@ GrowableBox = Ember.Component.extend
       @enableTransition()
     @$().css(overflow: 'hidden')
 
-    # if there are other DynamicSpacing views in our descendants, and
-    # they animate, we won't see their resulting size changes until
-    # their animations finish. This causes our animation to run in
-    # series after theirs.
+    # if there are other growing views in our descendants, and they
+    # animate, we won't see their resulting size changes until their
+    # animations finish. This causes our animation to run in series
+    # after theirs.
     #
     # Instead, we propagate our own event up the DOM to give early
     # warning, allowing the animations to run in parallel, which gives
@@ -44,4 +44,4 @@ GrowableBox = Ember.Component.extend
     'color: ' + this.get('name') + ';'
   ).property('name')
 
-`export default GrowableBox`
+`export default GrowingBox`
