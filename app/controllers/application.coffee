@@ -11,4 +11,17 @@ C = Ember.ArrayController.extend
     nextSlide: -> @jumpSlides(1)
     previousSlide: -> @jumpSlides(-1)
 
+$(->
+  $('body').on 'keydown', (e) ->
+    ac = AnimationDemo.__container__.lookup('controller:application')
+    switch e.keyCode
+      when 37 # left
+        ac.send('previousSlide')
+      when 39, 32 # right, space
+        ac.send('nextSlide')
+        e.preventDefault()
+      else
+        console.log e.keyCode
+)
+
 `export default C`

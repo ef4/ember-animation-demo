@@ -1,5 +1,6 @@
 slides = [
   "Welcome"
+  "Not this kind"
   "Animated If"
 ]
 
