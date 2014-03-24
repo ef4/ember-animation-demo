@@ -6,7 +6,7 @@ var App = Ember.Application.extend({
   // LOG_TRANSITIONS: true,
   // LOG_TRANSITIONS_INTERNAL: true,
   LOG_VIEW_LOOKUPS: true,
-  modulePrefix: 'safe', // TODO: loaded via config
+  modulePrefix: 'animation-demo', // TODO: loaded via config
   Resolver: Resolver['default']
 });
 

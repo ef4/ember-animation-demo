@@ -20,7 +20,7 @@ module.exports = function (broccoli) {
 
   app = pickFiles(app, {
     srcDir: '/',
-    destDir: 'safe/'
+    destDir: 'animation-demo/'
   });
 
   app = preprocessTemplates(app);
@@ -28,12 +28,12 @@ module.exports = function (broccoli) {
   config = pickFiles(config, {
     srcDir: '/',
     files: ['environment.*', 'environments/' + env + '.*'],
-    destDir: 'safe/config'
+    destDir: 'animation-demo/config'
   });
 
   tests = pickFiles(tests, {
     srcDir: '/',
-    destDir: 'safe/tests'
+    destDir: 'animation-demo/tests'
   });
 
   tests = preprocessTemplates(tests);
@@ -52,7 +52,7 @@ module.exports = function (broccoli) {
 
   var appAndDependencies = new broccoli.MergedTree(sourceTrees);
 
-  appAndDependencies = preprocessJs(appAndDependencies, '/', 'safe');
+  appAndDependencies = preprocessJs(appAndDependencies, '/', 'animation-demo');
 
   var applicationJs = compileES6(appAndDependencies, {
     loaderFile: 'loader.js',
@@ -60,11 +60,11 @@ module.exports = function (broccoli) {
       'ember/resolver'
     ],
     inputFiles: [
-      'safe/**/*.js'
+      'animation-demo/**/*.js'
     ],
     legacyFilesToAppend: [
-      'safe/config/environment.js',
-      'safe/config/environments/' + env + '.js',
+      'animation-demo/config/environment.js',
+      'animation-demo/config/environments/' + env + '.js',
       'jquery.js',
       'handlebars.js',
       'ember.js',
@@ -77,7 +77,7 @@ module.exports = function (broccoli) {
     outputFile: '/assets/app.js'
   });
 
-  styles = preprocessCss(sourceTrees, 'safe/styles', '/assets');
+  styles = preprocessCss(sourceTrees, 'animation-demo/styles', '/assets');
 
   if (env === 'production') {
     applicationJs = uglifyJavaScript(applicationJs, {
