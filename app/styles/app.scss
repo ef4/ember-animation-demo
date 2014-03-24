@@ -1,7 +1,16 @@
+@import "colors";
+@import "curvy";
 @import "animated-if";
+@import "flex";
+@import "typography";
+@import "button";
+
 
 html, body {
-    margin: 20px;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: $background;
 }
 
 
@@ -9,3 +18,58 @@ html, body {
 @keyframes domChanged { from { background: yellow; } }
 @-webkit-keyframes domChanged { from { background: yellow; } }
 .ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+
+#topnav {
+    height: 100%;
+    position: absolute;
+}
+
+#navlist {
+    position: absolute;
+    background: $background;
+    z-index: 1;
+    left: -14em;
+    width: 15em;
+    height: 100%;
+    padding-top: 4.5em;
+    border-right: 1px solid $secondary;
+    a {
+	display: block;
+	cursor: pointer;
+	padding: 0.75em 1em;
+	border-bottom: 1px solid $tertiary;
+	color: $normal;
+	text-decoration: none;
+	&:first-of-type {
+	    border-top: 1px solid $tertiary;
+	}
+	&.active {
+	    color: $logo_blue;
+	    background-color: $bghighlight;
+	}
+	&:hover {
+	    background-color: $bghighlight;
+	}
+    }
+
+    -webkit-transition: -webkit-transform 250ms ease;
+    -webkit-transform: translateX(0);
+    overflow: hidden;
+    &:hover {
+	-webkit-transform: translateX(14em);
+    }
+}
+
+
+#main {
+    -webkit-transform: translateX(0);
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 1.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+

@@ -1,0 +1,41 @@
+/* Clericare Logo Colors */
+$logo_purple: #97005e;
+$logo_blue: #332a86;
+$logo_orange: #f8971d;
+
+/* Solarized */
+
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;		/* emphasized content */
+$base00:    #657b83;		/* main content */
+$base0:     #839496;
+$base1:     #93a1a1;		/* secondary content */
+$base2:     #eee8d5;		/* background highlights */
+$base3:     #fdf6e3;		/* background */
+$yellow:    #b58900;
+$orange:    #cb4b16;		/* my header background */
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
+
+/* Solarized color roles for light mode */
+$strong_emphasis: #001d28; /* was #415156, my own extrapolation */
+$emphasis: #003346; /* was #586e75 */
+$normal: #004863; /* was #657b83 */
+$secondary: #657b83; /* was #93a1a1 */
+$tertiary: #93a1a1; /* was #cbc6b6, my own extrapolation */
+$bghighlight: #f3eed6; /* was #eee8d5 */
+$background: #fffcf4; /* was #fdf6e3 */
+$bgbright: $background*1.05;
+$accent1: $logo_blue;
+
+$happy_green: #02912f;
+
+$pale_cyan: #C9F5FF;
+$light_blue: #73CCDE;
+
+$danger: $red;

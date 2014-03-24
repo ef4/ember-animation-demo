@@ -1,0 +1,112 @@
+/* Begin Standardized Leading Controls */
+body, input, textarea, select, button {
+    font-family: helvetica, verdana, arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    font-weight: normal;
+    text-align: left;
+    line-height: 1.5em;
+    color: $logo_blue;
+}
+h2 {
+    font-size: 1.25em;
+    margin: 0;
+    line-height:1.875em;
+    font-weight: normal;
+    text-align: left;
+    padding-top: 0.3em;
+    padding-bottom: 0.2em;
+}
+h3 {
+    font-size: 1em;
+    margin: 0;
+    font-weight: normal;
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.5em;
+}
+.line {
+    height: 1.5em;
+}
+.line2 {
+    height: 3em;
+}
+p {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+}
+label {
+    color: $secondary;
+    .example {
+	float: right;
+	color: $normal;
+	font-style: italic;
+	font-size: 0.9em;
+	line-height: 1.667em;
+    }
+}
+.clickable, .clickable:visited {
+   /*Need !important here to fight with jQueryUI */
+  color: $accent1!important;
+  cursor: pointer;
+  text-decoration: underline;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+label, input { display: block }
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus { outline: $logo_orange solid 2px }
+
+
+button { min-width: 7em }
+
+input[type="text"], textarea, input[type="password"] { 
+    width: 100%; 
+    @extend .border-box;
+}
+
+input[type="text"], textarea, select, input[type="password"] {
+    color: #333;
+    margin-top: 0;
+    border: 1px solid $tertiary;
+    padding: 0.2em;
+    background-color: white;
+    font-size: 1.1em;
+}
+
+input[type="text"], select, input[type="password"] {
+    height: 2em;
+}
+
+.row {
+    min-height: 4.5em;
+}
+
+.compact {
+    float: left;
+    padding-right: 0.5em;
+    @extend .border-box;
+}
+
+.half {
+    float: left;
+    width: 50%;
+    padding-right: 0.5em;
+    @extend .border-box;
+}
+
+.half + .half, .half + script + .half {
+    padding-right: 0;
+}

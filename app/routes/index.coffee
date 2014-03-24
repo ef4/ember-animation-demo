@@ -1,4 +1,6 @@
+`import slides from "animation-demo/models/slides"`
+
 IndexRoute = Ember.Route.extend
-  beforeModel: -> @transitionTo('slide00')
+  beforeModel: -> @transitionTo slides[0].get('route')
 
 `export default IndexRoute`

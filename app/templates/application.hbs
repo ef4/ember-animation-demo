@@ -1,3 +1,11 @@
-<div id="main">
-  {{outlet}}
+<div id="topnav" {{action "hotkey" on="keyPress"}}>
+  <div id="navlist">
+    {{#each}}
+    {{#link-to route}}{{title}}{{/link-to}}
+    {{/each}}
+  </div>
+
+  <div id="main">
+    {{outlet}}
+  </div>
 </div>
