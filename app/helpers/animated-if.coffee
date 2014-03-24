@@ -76,7 +76,7 @@ AnimatedIfView = Ember.ContainerView.extend
 
   ).on('didInsertElement')
 
-#import MeasuredBox from "appkit/components/measured-box"
+`import MeasuredBox from "animation-demo/components/measured-box"`
 AnimatedIfChild = MeasuredBox.extend
   offset: (->
     return 0 unless @get('away')
@@ -102,10 +102,12 @@ AnimatedIfChild = MeasuredBox.extend
       Ember.run =>
         @destroy() if @get('away')
 
-Ember.Handlebars.registerHelper 'animated-if', (property, options) ->
+helper = (property, options) ->
   options.hash.firstTemplate = options.fn
   delete options.fn
   options.hash.secondTemplate = options.inverse
   delete options.inverse
   options.hash.showFirstBinding = property
   Ember.Handlebars.helpers.view.call(this, AnimatedIfView, options)
+
+`export default helper`

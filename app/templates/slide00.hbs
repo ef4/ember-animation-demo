@@ -1,1 +1,7 @@
-Slide 0
+{{#animated-if showingDetail}}
+Detail<br>More stuff<br>other stuff
+{{else}}
+Not detail
+{{/animated-if}}
+
+<button {{action "toggleDetail"}}>Toggle</button>

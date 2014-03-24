@@ -1,0 +1,17 @@
+.animated-if {
+    &.activated {
+	-webkit-transition: height 250ms ease;
+    }
+    overflow: hidden;
+
+    /* This is needed to get overflow: hidden to work properly with the
+       transformed children. */
+    -webkit-transform: translate3d(0, 0, 0);
+
+    > div {
+       position: absolute;
+	-webkit-transition: -webkit-transform 250ms ease;
+    }
+}
+
+
