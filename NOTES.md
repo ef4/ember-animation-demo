@@ -51,7 +51,7 @@ Outline
   powerful tool, but finding ways to connect normal people with
   powerful abstractions is deeply challenging.
 
-- Ember and Animation
+- Ember Specifics
 
   Broadly speaking, there are two classes of animations in an Ember
   app: ones that involve a single route, and ones that move between

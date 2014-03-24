@@ -21,6 +21,7 @@ html, body {
 
 #topnav {
     height: 100%;
+    width: 100%;
     position: absolute;
 }
 
@@ -31,7 +32,6 @@ html, body {
     left: -14em;
     width: 15em;
     height: 100%;
-    padding-top: 4.5em;
     border-right: 1px solid $secondary;
     a {
 	display: block;
@@ -40,9 +40,6 @@ html, body {
 	border-bottom: 1px solid $tertiary;
 	color: $normal;
 	text-decoration: none;
-	&:first-of-type {
-	    border-top: 1px solid $tertiary;
-	}
 	&.active {
 	    color: $logo_blue;
 	    background-color: $bghighlight;
@@ -54,7 +51,9 @@ html, body {
 
     -webkit-transition: -webkit-transform 250ms ease;
     -webkit-transform: translateX(0);
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
     &:hover {
 	-webkit-transform: translateX(14em);
     }
@@ -73,3 +72,25 @@ html, body {
 }
 
 
+#mb-demo{
+    @extend .display-flex;
+    > div {
+	@extend .flex;
+	padding-right: 1.5em;
+    }
+    input, textarea {
+	box-sizing: border-box;
+    }
+    h3 {
+	font-size: 2em;
+    }
+    .story {
+	max-width: 10em;
+    }
+    .redline {
+	border-top: 1px solid red;
+    }
+    .height-display {
+	font-size: 6em;
+    }
+}

@@ -1,0 +1,20 @@
+<div id="mb-demo">
+  <div>
+    <label>Title:</label>
+    {{input value=title}}
+    <label>Story:</label>
+    {{textarea rows=3 value=story}}
+  </div>
+
+  <div class="middle">
+    {{#measured-box class="mb" height=storyHeight}}
+      <div class="redline"></div>
+      <h3>{{title}}</h3>
+      <div class="story">{{story}}</div>
+      <div class="redline"></div>
+    {{/measured-box}}
+  </div>
+
+  <div class="height-display">{{storyHeight}}px</div>
+
+</div>

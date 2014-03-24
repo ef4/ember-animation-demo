@@ -1,7 +1,13 @@
 slides = [
   "Title Slide"
-  "Not this kind"
-  "Animated If"
+  "Not This Kind"
+  "Physical Metaphors"
+  "Momentum Example"
+  "Slide Example"
+  "Ember Specifics"
+  "Simple Animations"
+  "Resuable Components"
+  "Measured Box Demo"
 ]
 
 Slide = Ember.Object.extend

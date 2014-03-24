@@ -17,9 +17,8 @@ $(->
     switch e.keyCode
       when 37 # left
         ac.send('previousSlide')
-      when 39, 32 # right, space
+      when 39 # right
         ac.send('nextSlide')
-        e.preventDefault()
       else
         console.log e.keyCode
 )
