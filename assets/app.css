@@ -14,7 +14,7 @@
 /* was #cbc6b6, my own extrapolation */
 /* was #eee8d5 */
 /* was #fdf6e3 */
-.curvy, button, input[type="submit"], .modal-popup > div, .tomster > div {
+.curvy, button, input[type="submit"], .modal-popup > div, .tomster > div, .CodeRay {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px; }
@@ -293,7 +293,7 @@ button, input[type="submit"] {
     border: 1px solid #657b83;
     margin-left: auto;
     margin-right: auto;
-    max-width: 40em;
+    max-width: 20em;
     -webkit-animation-name: scale-up;
     -webkit-animation-duration: 250ms;
     -webkit-animation-fill-mode: forwards; }
@@ -384,6 +384,7 @@ html, body {
 
 #main {
   justify-content: center;
+  flex-align: center;
   -webkit-transform: translateX(0);
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -485,6 +486,7 @@ button.del {
     -webkit-transform: translateX(0); }
   #parent-demo > div > div {
     width: 200%;
+    height: 100%;
     -webkit-transition: -webkit-transform 250ms;
     -webkit-transform: translateX(0); }
     #parent-demo > div > div.over {
@@ -494,18 +496,21 @@ button.del {
       width: 50%;
       box-sizing: border-box;
       float: left; }
-  #parent-demo .list a {
-    display: block;
-    cursor: pointer;
-    padding: 0.75em 1em;
-    border-bottom: 1px solid #93a1a1;
-    color: #004863;
-    text-decoration: none; }
-    #parent-demo .list a.active {
-      color: #332a86;
-      background-color: #f3eed6; }
-    #parent-demo .list a:hover {
-      background-color: #f3eed6; }
+  #parent-demo .list {
+    overflow-y: scroll;
+    height: 100%; }
+    #parent-demo .list a {
+      display: block;
+      cursor: pointer;
+      padding: 0.75em 1em;
+      border-bottom: 1px solid #93a1a1;
+      color: #004863;
+      text-decoration: none; }
+      #parent-demo .list a.active {
+        color: #332a86;
+        background-color: #f3eed6; }
+      #parent-demo .list a:hover {
+        background-color: #f3eed6; }
 
 .attribution {
   font-size: 0.8;
@@ -553,3 +558,9 @@ button.del {
 
   to {
     -webkit-transform: rotateX(-15deg) rotateY(360deg); } }
+
+.CodeRay {
+  font-size: 2em;
+  border: 1px solid #657b83;
+  background-color: #f3eed6;
+  padding: 0 0.5em; }
