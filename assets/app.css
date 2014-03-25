@@ -14,7 +14,7 @@
 /* was #cbc6b6, my own extrapolation */
 /* was #eee8d5 */
 /* was #fdf6e3 */
-.curvy, button, input[type="submit"], .modal-popup > div, .tomster > div, .CodeRay {
+.curvy, button, input[type="submit"], .modal-popup > div, .tomster > div, .CodeRay, #animated-if-demo {
   border-radius: 8px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px; }
@@ -564,3 +564,15 @@ button.del {
   border: 1px solid #657b83;
   background-color: #f3eed6;
   padding: 0 0.5em; }
+
+#animated-if-demo {
+  border: 1px solid #657b83;
+  background-color: #C9F5FF;
+  padding: 0 0.5em;
+  min-width: 30em; }
+  #animated-if-demo select {
+    display: inline-block; }
+  #animated-if-demo .checkbox input {
+    display: inline; }
+  #animated-if-demo .buttons {
+    text-align: center; }
