@@ -248,7 +248,9 @@ button.del {
     position: relative;
     width: 324px;
     height: 308px;
-    margin: 40px;
+    margin: 60px;
+    left: -60px;
+
     -webkit-transform-style: preserve-3d;
 
     -webkit-animation: spin 6s linear infinite;
@@ -259,7 +261,7 @@ button.del {
 	top: 0; left: 0;
 	width: 100%;
 	height: 100%;
-	-webkit-backface-visibility: hidden;
+	x-webkit-backface-visibility: hidden;
 
     }
     .front {
@@ -269,12 +271,20 @@ button.del {
     }
     .back {
 	background-color: $bghighlight;
-	-webkit-transform: rotateY(180deg);  
+	background-image: url(../tomster.png);
+	-webkit-transform: translateX(-50%)rotateY(-120deg)translateX(-50%);  
     }
+    .side {
+	background-color: $bghighlight;
+	background-image: url(../tomster.png);
+	-webkit-transform: translateX(50%)rotateY(120deg)translateX(50%);  
+    }
+
 }
 
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotateX(0); }
-    50% { -webkit-transform: rotateX(-15deg)rotateY(180deg); }
-    to { -webkit-transform: rotateX(0)rotateY(360deg); }
+    from { -webkit-transform: rotateX(-15deg); }
+    25% { -webkit-transform: rotateX(-15deg)rotateY(90deg); }
+    75% { -webkit-transform: rotateX(-15deg)rotateY(270deg); }
+    to { -webkit-transform: rotateX(-15deg)rotateY(360deg); }
 }
