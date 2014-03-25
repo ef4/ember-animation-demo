@@ -1,0 +1,12 @@
+<div id="parent-demo">
+  <div>
+    <div>
+      {{#each}}
+        {{#link-to "parent-child-transition.detail" this}}{{name}}{{/link-to}}
+      {{/each}}
+    </div>
+    <div class="detail">
+      {{outlet}}
+    </div>
+  </div>
+</div>

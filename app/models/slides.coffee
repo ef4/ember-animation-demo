@@ -11,6 +11,7 @@ slides = [
   "Measured Box Demo"
   "Growing Box Demo"
   "Animated If Demo"
+  {title: "Parent Child Transition", autoRoute: false}
 ]
 
 Slide = Ember.Object.extend
