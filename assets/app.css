@@ -59,7 +59,7 @@
 deprecated methods with the new standard methods to get reasonable
 cross-browser support. I've only tested this on latest stable Chrome,
 Firefox, and iOS. */
-.display-flex, #mb-demo, #physical-metaphors {
+.display-flex, #main, #mb-demo, #physical-metaphors {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
@@ -103,7 +103,7 @@ Firefox, and iOS. */
   -webkit-flex-direction: column;
   flex-direction: column; }
 
-.flex, #mb-demo > div, #physical-metaphors > div {
+.flex, #mb-demo, #mb-demo > div, #physical-metaphors > div {
   -webkit-box-flex: 1;
   /* OLD - iOS 6-, Safari 3.1-6 */
   -moz-box-flex: 1;
@@ -383,6 +383,7 @@ html, body {
     -webkit-transform: translateX(14em); }
 
 #main {
+  justify-content: center;
   -webkit-transform: translateX(0);
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -516,7 +517,8 @@ button.del {
   position: relative;
   width: 324px;
   height: 308px;
-  margin: 40px;
+  margin: 60px;
+  left: -60px;
   -webkit-transform-style: preserve-3d;
   -webkit-animation: spin 6s linear infinite; }
   .tomster > div {
@@ -525,21 +527,29 @@ button.del {
     left: 0;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; }
+    x-webkit-backface-visibility: hidden; }
   .tomster .front {
     background-color: #f3eed6;
     background-image: url(../tomster.png);
     z-index: 1; }
   .tomster .back {
     background-color: #f3eed6;
-    -webkit-transform: rotateY(180deg); }
+    background-image: url(../tomster.png);
+    -webkit-transform: translateX(-50%) rotateY(-120deg) translateX(-50%); }
+  .tomster .side {
+    background-color: #f3eed6;
+    background-image: url(../tomster.png);
+    -webkit-transform: translateX(50%) rotateY(120deg) translateX(50%); }
 
 @-webkit-keyframes spin {
   from {
-    -webkit-transform: rotateX(0); }
+    -webkit-transform: rotateX(-15deg); }
 
-  50% {
-    -webkit-transform: rotateX(-15deg) rotateY(180deg); }
+  25% {
+    -webkit-transform: rotateX(-15deg) rotateY(90deg); }
+
+  75% {
+    -webkit-transform: rotateX(-15deg) rotateY(270deg); }
 
   to {
-    -webkit-transform: rotateX(0) rotateY(360deg); } }
+    -webkit-transform: rotateX(-15deg) rotateY(360deg); } }
