@@ -100,27 +100,86 @@ button.del {
     margin-top: 1.5em;
 }
 
+
+
 #now-demo {
     font-size: 3em;
-    .change-animator {
+
+    .time {
 	display: inline-block;
 	height: 1.5em;
 	width: 1.15em;
 	text-align: center;
 	vertical-align: top;
+	overflow: hidden;
+	
+	/* without this, overflow:hidden won't take effect because the things
+           we're trying to hide are on a separate accelerated
+           context. */
+	-webkit-transform: translateY(0);
+	
 	> div {
    	    height: 1.5em;
 	    position: absolute;
 	}
     }
-    .animating {
-	-webkit-animation: slide-down 250ms;
+    .time.animating {
+	> div {
+	    -webkit-animation: slide-down 750ms;
+	}
     }
+
+    .mood {
+	display: inline-block;
+	height: 1.5em;
+	width: 7em;
+	text-align: center;
+	vertical-align: top;
+	.current, .next {
+	    position: absolute;
+	    top: 0;
+	}
+    }
+    .mood.animating {
+	.current {
+	    -webkit-animation: fade-away 2s;
+	}
+	.next {
+	    -webkit-animation: fade-in 2s;
+	}
+
+    }
+
+    .mood-box {
+	-webkit-transition: color 2s;
+	&.Happy {
+	    color: $orange;
+	}
+	&.Hungry {
+	    color: $magenta;
+	}
+	&.Tired {
+	    color: $violet;
+	}
+	&.Sleepy {
+	    color: #000;
+	}
+    }
+
 }
 
 @-webkit-keyframes slide-down {
-    from { -webkit-transform: translateY(-50%); }
+    from { -webkit-transform: translateY(-100%); }
     to { -webkit-transform: translateY(0); }
 }
 
+@-webkit-keyframes fade-away {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@-webkit-keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
 

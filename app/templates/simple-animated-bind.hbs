@@ -1,3 +1,8 @@
 <div id="now-demo">
-  This current time is {{animate-changes of=hours}}:{{animate-changes of=minutes}}:{{animate-changes of=seconds}}
+
+    At {{animate-changes of=hours class="time"}}:{{animate-changes of=minutes class="time"}}:{{animate-changes of=seconds class="time"}}
+
+    my mood is <span {{bind-attr class="mood :mood-box"}}>{{animate-changes of=mood class="mood"}}</span>
+
 </div>
+
