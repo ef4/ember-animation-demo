@@ -214,3 +214,16 @@ button.del {
 	}
     }
 }
+
+.attribution {
+    font-size: 0.8;
+    color: $logo_blue;
+    font-style: italic;
+}
+
+#physical-metaphors {
+    @extend .display-flex;
+    > div {
+	@extend .flex;
+    }
+}
