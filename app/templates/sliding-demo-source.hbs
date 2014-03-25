@@ -1,0 +1,39 @@
+<div class="CodeRay">
+  <div class="code"><pre><span style="color:#b48">`import SampleItem from &quot;animation-demo/models/sample_item&quot;`</span>
+
+R = Ember.Route.extend
+  <span style="color:#070;font-weight:bold">model</span>: (params) -&gt;
+    SampleItem.find(params.id)
+
+  <span style="color:#070;font-weight:bold">actions</span>:
+    <span style="color:#070;font-weight:bold">back</span>: -&gt; @transitionTo 'parent-child-transition'
+
+    <span style="color:#070;font-weight:bold">willTransition</span>: (transition) -&gt;
+      me = @routeName
+
+      <span style="color:#D20"># if the destination still involves us, we don't need to do
+      # anything. This covers the case where we're moving between our
+      # own child routes, for example.</span>
+      if transition.params['parent-child-transition.detail']
+        return true
+
+      <span style="color:#D20"># clear the flag that slid us over</span>
+      @controllerFor('parent-child-transition').set('over', false)
+
+      <span style="color:#D20"># if the destination is beyond even our parent, we don't need to
+      # wait for the animation to run.</span>
+      unless transition.params['parent-child-transition']
+        return true
+
+      <span style="color:#D20"># otherwise, we need to wait for the animation to run before we
+      # let our view get destroyed.</span>
+      if ((container = $(&quot;.parent-child-slider&quot;)).length &gt; 0) and container.is('.over')
+        transition.abort()
+        container.one 'webkitTransitionEnd', -&gt;
+          Ember.run -&gt; transition.retry()
+      true
+
+<span style="color:#b48">`export default R`</span></pre></div>
+</div>
+
+
