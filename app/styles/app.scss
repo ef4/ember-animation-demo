@@ -59,6 +59,7 @@ html, body {
 #main {
     @extend .display-flex;
     justify-content: center;
+    flex-align: center;
     -webkit-transform: translateX(0);
     margin-left: 1.5em;
     margin-right: 1.5em;
@@ -287,4 +288,12 @@ button.del {
     25% { -webkit-transform: rotateX(-15deg)rotateY(90deg); }
     75% { -webkit-transform: rotateX(-15deg)rotateY(270deg); }
     to { -webkit-transform: rotateX(-15deg)rotateY(360deg); }
+}
+
+.CodeRay {
+    font-size: 2em;
+    border: 1px solid $secondary;
+    @extend .curvy;
+    background-color: $bghighlight;
+    padding: 0 0.5em;
 }

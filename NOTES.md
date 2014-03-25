@@ -5,15 +5,15 @@ Outline
 
 - Meta
 
-  This presentation is an Ember app, follow along here.
+  This presentation is an Ember app, follow along.
 
   I built the whole thing in about a day, which is an awesome
   testament to how productive Ember has become. Special thanks to Jo
-  and Stephan for ember-cli, which I used for the first time to great
-  effect here.
+  Liss and Stefan Penner for broccoli & ember-cli, which I used for
+  the first time to great effect here.
 
   No promises you won't hit bugs. No promises all the demos work in
-  anything other than Webkit. It *was* only about a day....
+  anything other than Chrome. It *was* only about a day....
 
 - Title Slide
 
@@ -47,7 +47,7 @@ Outline
   To preserve the illusion, any delay has to be imperceptible. This is
   why we care about "jank".
 
-- Slide Example
+- Slider Example (jump to "Parent Child Transition" slide to illustrate)
 
   Our monkey brains are not adapted to things instantly appearing and
   disappearing. If we can provide physical simulations for where
@@ -72,15 +72,12 @@ Outline
   Animations within a single route are relatively easy, and can mostly
   be contained within the view layer using components.
 
-  [Demo an adaptive form, and explain each piece. Possibly just use the order editor.]
-
 - Reusable components
 
   - animate-changes
   - measurable-box
   - growable-box
   - animated-if
-
 
 - Inter-route animations
 
@@ -104,16 +101,3 @@ Outline
   - trigger the load & fade immediately
   - trigger the fade back in once the new model is ready
 
-  
-
-- This Presentation
-
-  Is an ember app, and here's the source. I threw the whole app
-  together in only about a day, which is a testament to just how far
-  Ember has come. Thanks to all contributors, and a special shout out
-  to Jo Liss and Stephan Penner for ember-cli.
-
-TODOs
------
-
-use momentjs for nicer "now" deo

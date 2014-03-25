@@ -1,8 +1,14 @@
 <div id="now-demo">
 
-    At {{animate-changes of=hours class="time"}}:{{animate-changes of=minutes class="time"}}:{{animate-changes of=seconds class="time"}}
+    At {{animate-changes of=hours class="time"}}:
+       {{animate-changes of=minutes class="time"}}:
+       {{animate-changes of=seconds class="time"}}
 
-    my mood is <span {{bind-attr class="mood :mood-box"}}>{{animate-changes of=mood class="mood"}}</span>
+    my mood is 
+
+    <span {{bind-attr class="mood :mood-box"}}>
+      {{animate-changes of=mood class="mood"}}
+   </span>
 
 </div>
 

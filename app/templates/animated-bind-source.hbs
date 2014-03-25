@@ -1,0 +1,62 @@
+<div>
+<h2>The Demo</h2>
+
+<div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">id</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">now-demo</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+    At <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">animate-changes</span> <span style="color:#b48">of</span>=<span style="color:#700">hours</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">time</span><span style="color:#710">&quot;</span></span><span style="font-weight:bold;color:#666">}}</span></span>:
+       <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">animate-changes</span> <span style="color:#b48">of</span>=<span style="color:#700">minutes</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">time</span><span style="color:#710">&quot;</span></span><span style="font-weight:bold;color:#666">}}</span></span>:
+       <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">animate-changes</span> <span style="color:#b48">of</span>=<span style="color:#700">seconds</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">time</span><span style="color:#710">&quot;</span></span><span style="font-weight:bold;color:#666">}}</span></span>
+
+    my mood is 
+
+    <span style="color:#070;font-weight:bold">&lt;span</span> <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">bind-attr</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mood :mood-box</span><span style="color:#710">&quot;</span></span><span style="font-weight:bold;color:#666">}}</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+      <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">animate-changes</span> <span style="color:#b48">of</span>=<span style="color:#700">mood</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">mood</span><span style="color:#710">&quot;</span></span><span style="font-weight:bold;color:#666">}}</span></span>
+   <span style="color:#070;font-weight:bold">&lt;/span&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+</pre></div>
+</div>
+
+<h2>The Component's Template</h2>
+
+<div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">next</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">nextValue</span><span style="font-weight:bold;color:#666">}}</span></span><span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">current</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">currentValue</span><span style="font-weight:bold;color:#666">}}</span></span><span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+
+<h2>The Component</h2>
+
+<div class="CodeRay">
+  <div class="code"><pre>AnimateChanges = Ember.Component.extend
+  tagName: 'div'
+  classNameBindings: ['animating', ':change-animator']
+
+  didInsertElement: -&gt;
+    @animationEnabled = true
+
+  of: ((k,v)-&gt;
+    if arguments.length &gt; 1
+      if @animationEnabled
+        @set('nextValue', v)
+        @triggerAnimation()
+      else
+        @set('currentValue', v)
+      v
+    null
+  ).property()
+
+  triggerAnimation: -&gt;
+    @set('animating', true)
+    @$().one 'webkitAnimationEnd', =&gt;
+      @set('currentValue', @get('nextValue'))
+      @set('animating', false)
+
+`export default AnimateChanges`</pre></div>
+</div>
+
+</div>
