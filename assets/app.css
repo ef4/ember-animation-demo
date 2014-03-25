@@ -474,7 +474,7 @@ button.del {
 #parent-demo {
   width: 551px;
   height: 700px;
-  background-image: url(/tablet.png);
+  background-image: url(../tablet.png);
   padding: 80px 56px 80px 62px;
   box-sizing: border-box; }
   #parent-demo > div {
@@ -528,7 +528,7 @@ button.del {
     -webkit-backface-visibility: hidden; }
   .tomster .front {
     background-color: #f3eed6;
-    background-image: url(/tomster.png);
+    background-image: url(../tomster.png);
     z-index: 1; }
   .tomster .back {
     background-color: #f3eed6;
