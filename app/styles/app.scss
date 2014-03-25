@@ -227,3 +227,38 @@ button.del {
 	@extend .flex;
     }
 }
+
+.tomster {
+    position: relative;
+    width: 324px;
+    height: 308px;
+    margin: 40px;
+    -webkit-transform-style: preserve-3d;
+
+    -webkit-animation: spin 6s linear infinite;
+
+    > div {
+	@extend .curvy;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+
+    }
+    .front {
+	background-color: $bghighlight;	
+	background-image: url(/tomster.png);
+	z-index: 1;
+    }
+    .back {
+	background-color: $bghighlight;
+	-webkit-transform: rotateY(180deg);  
+    }
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotateX(0); }
+    50% { -webkit-transform: rotateX(-15deg)rotateY(180deg); }
+    to { -webkit-transform: rotateX(0)rotateY(360deg); }
+}
