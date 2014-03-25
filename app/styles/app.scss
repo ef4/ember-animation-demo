@@ -57,6 +57,8 @@ html, body {
 
 
 #main {
+    @extend .display-flex;
+    justify-content: center;
     -webkit-transform: translateX(0);
     margin-left: 1.5em;
     margin-right: 1.5em;
@@ -69,6 +71,7 @@ html, body {
 
 
 #mb-demo{
+    @extend .flex;
     @extend .display-flex;
     > div {
 	@extend .flex;
