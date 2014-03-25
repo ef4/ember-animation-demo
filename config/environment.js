@@ -7,4 +7,4 @@
 //
 // window.ENV = {FEATURES: {'with-controller': true}};
 
-window.ENV = {};
+window.ENV = {FEATURES: {'query-params-new': true}};

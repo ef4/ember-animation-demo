@@ -12,11 +12,12 @@ slides = [
   "Growing Box Demo"
   "Animated If Demo"
   {title: "Parent Child Transition", autoRoute: false}
+  {title: "Modal Demo", route: "modal-launcher"}
 ]
 
 Slide = Ember.Object.extend
   route: ((k,v) ->
-    return if arguments.length > 1
+    return v if arguments.length > 1
     @get('title').dasherize()
   ).property('title')
 
