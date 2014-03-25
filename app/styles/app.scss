@@ -199,6 +199,7 @@ button.del {
 
     > div > div {
 	width: 200%;
+	height: 100%;
 	-webkit-transition: -webkit-transform 250ms;
 	-webkit-transform: translateX(0);
 	&.over {
@@ -214,6 +215,9 @@ button.del {
     }
     
     .list {
+	overflow-y:scroll;
+	height: 100%;
+	
 	a {
 	    display: block;
 	    cursor: pointer;
