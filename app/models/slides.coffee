@@ -10,6 +10,7 @@ slides = [
   "Simple Animated Bind"
   "Measured Box Demo"
   "Growing Box Demo"
+  "Animated If Demo"
 ]
 
 Slide = Ember.Object.extend

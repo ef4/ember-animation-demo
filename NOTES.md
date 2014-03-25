@@ -3,6 +3,18 @@ These are the speaker's notes that accompany the slides.
 Outline
 -------
 
+- Meta
+
+  This presentation is an Ember app, follow along here.
+
+  I built the whole thing in about a day, which is an awesome
+  testament to how productive Ember has become. Special thanks to Jo
+  and Stephan for ember-cli, which I used for the first time to great
+  effect here.
+
+  No promises you won't hit bugs. No promises all the demos work in
+  anything other than Webkit. It *was* only about a day....
+
 - Title Slide
 
   I'm going to talk about how to incorporate animations and
@@ -57,8 +69,6 @@ Outline
   app: ones that involve a single route, and ones that move between
   routes. 
 
-- Simple Animations
-
   Animations within a single route are relatively easy, and can mostly
   be contained within the view layer using components.
 
@@ -66,10 +76,11 @@ Outline
 
 - Reusable components
 
+  - animate-changes
   - measurable-box
   - growable-box
   - animated-if
-  - animated bound value update with both old and new values on screen concurrently
+
 
 - Inter-route animations
 
