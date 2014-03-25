@@ -7,6 +7,8 @@ items = [
 
 SampleItem.reopenClass
   findAll: -> items.map (i) -> SampleItem.create(i)
-  find: (id) -> @findAll().find (item) -> item.get('id') == id
+  find: (id) ->
+    console.log("trying to find #{id}")
+    @findAll().find (item) -> String(item.get('id')) == String(id)
 
 `export default SampleItem`

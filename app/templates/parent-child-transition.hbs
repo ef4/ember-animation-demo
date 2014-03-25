@@ -1,6 +1,6 @@
 <div id="parent-demo">
-  <div>
-    <div>
+  <div {{bind-attr class="over"}}>
+    <div class="list">
       {{#each}}
         {{#link-to "parent-child-transition.detail" this}}{{name}}{{/link-to}}
       {{/each}}
