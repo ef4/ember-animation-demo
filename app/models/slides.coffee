@@ -7,6 +7,7 @@ slides = [
   "Ember Specifics"
   "Simple Animations"
   "Resuable Components"
+  "Simple Animated Bind"
   "Measured Box Demo"
   "Growing Box Demo"
 ]

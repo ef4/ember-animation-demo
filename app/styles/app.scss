@@ -14,10 +14,11 @@ html, body {
 }
 
 
-
+/*
 @keyframes domChanged { from { background: yellow; } }
 @-webkit-keyframes domChanged { from { background: yellow; } }
 .ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+*/
 
 #topnav {
     height: 100%;
@@ -98,3 +99,28 @@ html, body {
 button.del {
     margin-top: 1.5em;
 }
+
+#now-demo {
+    font-size: 3em;
+    .change-animator {
+	display: inline-block;
+	height: 1.5em;
+	width: 1.15em;
+	text-align: center;
+	vertical-align: top;
+	> div {
+   	    height: 1.5em;
+	    position: absolute;
+	}
+    }
+    .animating {
+	-webkit-animation: slide-down 250ms;
+    }
+}
+
+@-webkit-keyframes slide-down {
+    from { -webkit-transform: translateY(-50%); }
+    to { -webkit-transform: translateY(0); }
+}
+
+

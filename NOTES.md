@@ -102,24 +102,7 @@ Outline
   Ember has come. Thanks to all contributors, and a special shout out
   to Jo Liss and Stephan Penner for ember-cli.
 
-Idea Stack
-----------
+TODOs
+-----
 
-- Animations within a single route
-  - simplest case: bind a class and use transitions
-  - measured view
-  - dynamic spacer
-  - animated-if
-  - animate a bound value updating
-
-- Animations between routes
-  - nested routes are your friend
-    - master / detail animated transition pattern
-
-    - aside: another reason to use nested routes is to quantine
-      expensive views so that their parents can render faster, giving
-      the user faster access to navigation, etc.
-
-  - named outlets are your friend
-    - modals
-      - problem of components with their own many sub-routes: can we use queryparams to solve this?
+use momentjs for nicer "now" deo
