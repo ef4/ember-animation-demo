@@ -1,12 +1,15 @@
 <div id="parent-demo">
-  <div {{bind-attr class="over :parent-child-slider"}}>
-    <div class="list">
-      {{#each}}
-        {{#link-to "parent-child-transition.detail" this}}{{name}}{{/link-to}}
-      {{/each}}
-    </div>
-    <div class="detail">
-      {{outlet}}
+  <div>
+    <div {{bind-attr class="over :parent-child-slider"}}>
+      <div class="list">
+	{{#each}}
+	  {{#link-to "parent-child-transition.detail" this}}{{name}}{{/link-to}}
+	{{/each}}
+      </div>
+      <div class="detail">
+	{{outlet}}
+      </div>
     </div>
   </div>
 </div>
+
