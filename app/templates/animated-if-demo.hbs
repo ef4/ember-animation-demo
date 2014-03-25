@@ -1,11 +1,35 @@
-<div>
+<div id="animated-if-demo">
 
-  {{#animated-if showingDetail}}
-  Detail<br>More stuff<br>other stuff
+  <div class="row">
+    <label>Name</label>
+    {{input value=name}}
+  </div>
+
+  <div class="compact">
+    <label style="min-width: 10em">Vehicle to Rent</label>
+    {{view Ember.Select value=vehicle content=vehicleChoices}}
+  </div>
+
+  
+  {{#animated-if requiresLicense}}
+    <div class="compact">
+      <label>Driver's License Number</label>
+      {{input value=licenseNum}}
+    </div>
+    <div class="compact">
+      <label>Driver's License State</label>
+      {{view Ember.Select value=state content=states}}
+    </div>
   {{else}}
-  Not detail
+    <div class="compact">
+      <label class="checkbox">Would you like a helmet? {{input type="checkbox" checked=helmet}}</label>
+    </div>
   {{/animated-if}}
 
-  <button {{action "toggleDetail"}}>Toggle</button>
+  <div class="clearfix"></div>
+
+  <div class="row buttons">
+    <button>Let's Go</button>
+  </div>
 
 </div>

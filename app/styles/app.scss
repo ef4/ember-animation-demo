@@ -301,3 +301,20 @@ button.del {
     background-color: $bghighlight;
     padding: 0 0.5em;
 }
+
+#animated-if-demo {
+    border: 1px solid $secondary;
+    @extend .curvy;
+    background-color: $pale_cyan;
+    padding: 0 0.5em;
+    min-width: 30em;
+    select {
+	display: inline-block;
+    }
+    .checkbox input {
+	display: inline;
+    }
+    .buttons {
+	text-align: center;
+    }
+}

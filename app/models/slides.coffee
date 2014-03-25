@@ -9,6 +9,7 @@ slides = [
   "Growing Box Demo"
   "Growing Box Source"
   "Animated If Demo"
+  "Animated If Source"
   {title: "Parent Child Transition", autoRoute: false}
   "Sliding Demo Source"
   {title: "Modal Demo", route: "modal-launcher"}

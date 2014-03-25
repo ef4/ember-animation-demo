@@ -1,6 +1,10 @@
 C = Ember.Controller.extend
-  showingDetail: false
-  actions:
-    toggleDetail: -> @set('showingDetail', not @get('showingDetail'))
+  vehicle: 'Bicycle'
+  vehicleChoices: ['Bicycle', 'Car']
+  state: null
+  states: ['Alabama', 'Alaska', 'Arizona', 'Wyoming']
+
+  requiresLicense: Em.computed.equal('vehicle', 'Car')
+
 
 `export default C`

@@ -92,12 +92,6 @@ Outline
   - needs willTransition to get back out before the child is destroyed
 
 - Modals
-
   - named outlets
   - query params
-
-- model-to-model fade
-
-  - trigger the load & fade immediately
-  - trigger the fade back in once the new model is ready
 

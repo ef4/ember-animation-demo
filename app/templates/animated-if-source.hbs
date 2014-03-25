@@ -1,0 +1,39 @@
+<div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">id</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">animated-if-demo</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">row</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;label&gt;</span>Name<span style="color:#070;font-weight:bold">&lt;/label&gt;</span>
+    <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">input</span> <span style="color:#b48">value</span>=<span style="color:#700">name</span><span style="font-weight:bold;color:#666">}}</span></span>
+  <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">compact</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;label</span> <span style="color:#b48">style</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#606">min-width</span>: <span style="color:#60E">10em</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>Vehicle to Rent<span style="color:#070;font-weight:bold">&lt;/label&gt;</span>
+    <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">view</span> <span style="color:#b48">Ember.Select</span> <span style="color:#b48">value</span>=<span style="color:#700">vehicle</span> <span style="color:#b48">content</span>=<span style="color:#700">vehicleChoices</span><span style="font-weight:bold;color:#666">}}</span></span>
+  <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+  
+  <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;#</span><span style="color:#b48">animated-if</span> <span style="color:#b48">requiresLicense</span><span style="font-weight:bold;color:#666">}}</span></span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">compact</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;label&gt;</span>Driver's License Number<span style="color:#070;font-weight:bold">&lt;/label&gt;</span>
+      <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">input</span> <span style="color:#b48">value</span>=<span style="color:#700">licenseNum</span><span style="font-weight:bold;color:#666">}}</span></span>
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">compact</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;label&gt;</span>Driver's License State<span style="color:#070;font-weight:bold">&lt;/label&gt;</span>
+      <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">view</span> <span style="color:#b48">Ember.Select</span> <span style="color:#b48">value</span>=<span style="color:#700">state</span> <span style="color:#b48">content</span>=<span style="color:#700">states</span><span style="font-weight:bold;color:#666">}}</span></span>
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+  <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">else</span><span style="font-weight:bold;color:#666">}}</span></span>
+    <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">compact</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+      <span style="color:#070;font-weight:bold">&lt;label</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">checkbox</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>Would you like a helmet? <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;</span><span style="color:#b48">input</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">checkbox</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">checked</span>=<span style="color:#700">helmet</span><span style="font-weight:bold;color:#666">}}</span></span><span style="color:#070;font-weight:bold">&lt;/label&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+  <span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">&#123;&#123;/</span><span style="color:#b48">animated-if</span><span style="font-weight:bold;color:#666">}}</span></span>
+
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">clearfix</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+  <span style="color:#070;font-weight:bold">&lt;div</span> <span style="color:#b48">class</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">row buttons</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+    <span style="color:#070;font-weight:bold">&lt;button&gt;</span>Let's Go<span style="color:#070;font-weight:bold">&lt;/button&gt;</span>
+  <span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+
+<span style="color:#070;font-weight:bold">&lt;/div&gt;</span>
+</pre></div>
+</div>
+
