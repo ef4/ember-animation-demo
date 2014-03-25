@@ -182,7 +182,7 @@ button.del {
 #parent-demo {
     width: 551px;
     height: 700px;
-    background-image: url(/tablet.png);
+    background-image: url(../tablet.png);
     padding: 80px 56px 80px 62px;
     box-sizing: border-box;
 
@@ -261,7 +261,7 @@ button.del {
     }
     .front {
 	background-color: $bghighlight;	
-	background-image: url(/tomster.png);
+	background-image: url(../tomster.png);
 	z-index: 1;
     }
     .back {
