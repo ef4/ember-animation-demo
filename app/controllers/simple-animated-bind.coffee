@@ -11,10 +11,10 @@ C = Ember.Controller.extend
   willDestroy: -> clearInterval(@interval)
 
   tick: ->
-    now = new Date
-    @set('hours', now.getHours())
-    @set('minutes', now.getMinutes())
-    @set('seconds', now.getSeconds())
+    now = moment()
+    @set('hours', now.format('hh'))
+    @set('minutes', now.format('mm'))
+    @set('seconds', now.format('ss'))
 
     @set('moodCounter', (@get('moodCounter')+1) % 4)
     if (@get('moodCounter')==0)
