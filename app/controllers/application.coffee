@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 C = Ember.ArrayController.extend
   queryParams:['modalDemo']
   modalDemo: false

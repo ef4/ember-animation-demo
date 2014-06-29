@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 SampleItem = Ember.Object.extend()
 
 SampleItem.reopenClass

@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 C = Ember.Controller.extend
   moodCounter: 0
   moodIndex: 0
