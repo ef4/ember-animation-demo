@@ -1,9 +1,9 @@
-import Resolver from 'resolver';
+import Resolver from 'ember/resolver';
 
 var resolver = Resolver.create();
 
 resolver.namespace = {
-  modulePrefix: 'safe'
+  modulePrefix: 'animation-demo'
 };
 
 export default resolver;

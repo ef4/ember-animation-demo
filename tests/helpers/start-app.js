@@ -1,7 +1,9 @@
-import Application from 'safe/app';
-import Router from 'safe/router';
+/* global require */
 
-function startApp(attrs) {
+var Application = require('animation-demo/app')['default'];
+var Router = require('animation-demo/router')['default'];
+
+export default function startApp(attrs) {
   var App;
 
   var attributes = Ember.merge({
@@ -25,5 +27,3 @@ function startApp(attrs) {
 
   return App;
 }
-
-export default startApp;

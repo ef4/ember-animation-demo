@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 C = Ember.Controller.extend
   vehicle: 'Bicycle'
   vehicleChoices: ['Bicycle', 'Car']

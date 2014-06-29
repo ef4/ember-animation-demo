@@ -1,3 +1,4 @@
+`import Ember from 'ember';`
 `import "animation-demo/utils/text_extensions"`
 
 C = Ember.Controller.extend

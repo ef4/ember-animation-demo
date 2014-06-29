@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 slides = [
   "Title Slide"
   "Not This Kind"

@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 C = Ember.ArrayController.extend
   needs: ['application']
   routeName: Em.computed.alias('controllers.application.currentRouteName')
