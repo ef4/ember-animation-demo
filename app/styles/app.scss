@@ -75,6 +75,7 @@ html, body {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     position: relative;
+    min-height: 400px;
 }
 
 
@@ -110,7 +111,7 @@ button.del {
 
 #now-demo {
     font-size: 3em;
-
+    
     .time {
 	display: inline-block;
 	height: 1.5em;
@@ -123,6 +124,8 @@ button.del {
            we're trying to hide are on a separate accelerated
            context. */
 	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	transform: translateY(0);        
 	
 	> div {
    	    height: 1.5em;
