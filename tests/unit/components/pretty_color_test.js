@@ -1,7 +1,7 @@
 import {
   test,
   moduleForComponent
-} from 'safe/tests/helpers/module_for';
+} from 'ember-qunit';
 
 moduleForComponent('pretty-color');
 

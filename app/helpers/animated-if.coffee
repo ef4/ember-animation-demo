@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 AnimatedIfView = Ember.ContainerView.extend
   classNames: ['animated-if']
   classNameBindings: ['activated']

@@ -1,4 +1,5 @@
 `import MutationObserver from "animation-demo/utils/mutation_observer"`
+`import Ember from 'ember';`
 
 MeasuredBox = Ember.Component.extend
   didInsertElement: ->

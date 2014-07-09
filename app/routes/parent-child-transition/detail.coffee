@@ -1,3 +1,4 @@
+`import Ember from 'ember';`
 `import SampleItem from "animation-demo/models/sample_item"`
 
 R = Ember.Route.extend
@@ -17,6 +18,5 @@ R = Ember.Route.extend
           container.one 'webkitTransitionEnd', ->
             Ember.run -> transition.retry()
       true
-
 
 `export default R`

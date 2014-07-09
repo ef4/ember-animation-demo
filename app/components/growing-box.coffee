@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 GrowingBox = Ember.Component.extend
   transition: 'height 250ms ease-out'
   animateAtInsertion: false

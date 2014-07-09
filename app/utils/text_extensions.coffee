@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 Ember.TextSupport.reopen
   didInsertElement: ->
     @_super()

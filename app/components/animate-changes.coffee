@@ -1,3 +1,5 @@
+`import Ember from 'ember';`
+
 AnimateChanges = Ember.Component.extend
   tagName: 'div'
   classNameBindings: ['animating', ':change-animator']
