@@ -28,6 +28,7 @@
     "express": "^4.1.1",
     "glob": "^3.2.9",
     "node-sass": "^0.9.3",
-    "originate": "0.1.5"
+    "originate": "0.1.5",
+    "liquid-fire": "0.0.1"
   }
 }

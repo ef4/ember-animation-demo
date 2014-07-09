@@ -7,7 +7,8 @@ module.exports = function(environment) {
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
-        'query-param': true
+        'query-param': true,
+        'ember-routing-will-change-hooks': true
       }
     },
 

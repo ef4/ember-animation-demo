@@ -1,14 +1,17 @@
 <div id="now-demo">
 
-    At {{animate-changes of=hours class="time"}}:
-       {{animate-changes of=minutes class="time"}}:
-       {{animate-changes of=seconds class="time"}}
+    At <div class="time">{{liquid-bind hours}}</div>:
+       <div class="time">{{liquid-bind minutes}}</div>:
+       <div class="time">{{liquid-bind seconds}}</div>
 
     my mood is 
 
-    <span {{bind-attr class="mood :mood-box"}}>
-      {{animate-changes of=mood class="mood"}}
-   </span>
+    <div class="mood">
+      {{!- Using "as" with liquid-with depends on a bugfix in Ember, see https://github.com/emberjs/ember.js/pull/5115 -}}
+      {{#liquid-with mood as mood}}
+        <div {{bind-attr class="mood"}}>{{mood}}</div>
+      {{/liquid-with}}
+    </div>
 
 </div>
 
