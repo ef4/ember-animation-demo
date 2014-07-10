@@ -6,15 +6,11 @@ slides = [
   "Physical Metaphors"
   "Momentum Example"
   "Simple Animated Bind"
-  "Animated Bind Source"
   "Measured Box Demo"
   "Growing Box Demo"
-  "Growing Box Source"
   "Animated If Demo"
-  "Animated If Source"
   {title: "Parent Child Transition", autoRoute: false}
   {title: "Context Dependent Route Transition", autoRoute: false}
-  "Sliding Demo Source"
   {title: "Modal Demo", route: "modal-launcher"}
 ]
 
