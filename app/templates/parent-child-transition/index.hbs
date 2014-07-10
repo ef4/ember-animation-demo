@@ -1,0 +1,7 @@
+<div class="list">
+  {{#each}}
+    {{#link-to "parent-child-transition.detail" this}}
+      {{lastName}}, {{firstName}}
+    {{/link-to}}
+  {{/each}}
+</div>

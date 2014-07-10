@@ -11,4 +11,14 @@ export default function(){
     this.between({class: 'demo-if'}),
     this.use('toDown')
   );
+  this.transition(
+    this.fromRoute('parent-child-transition.index'),
+    this.toRoute('parent-child-transition.detail'),
+    this.use('toLeft')
+  );
+  this.transition(
+    this.fromRoute('parent-child-transition.detail'),
+    this.toRoute('parent-child-transition.index'),
+    this.use('toRight')
+  );
 }

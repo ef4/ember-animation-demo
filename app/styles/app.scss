@@ -190,32 +190,24 @@ button.del {
     box-sizing: border-box;
 
     > div {
-	width: 100%;
-	height: 100%;
-	overflow:hidden;
-	-webkit-transform: translateX(0);
+        position: relative;
+        overflow: hidden;
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        transform: translateZ(0);
+        width: 100%;
+        height: 100%;
     }
-
-    > div > div {
-	width: 200%;
-	height: 100%;
-	-webkit-transition: -webkit-transform 250ms;
-	-webkit-transform: translateX(0);
-	&.over {
-	    -webkit-transform: translateX(-50%);
-	}
-	
-	> div {
-	    min-height: 1em;
-	    width: 50%;
-	    box-sizing: border-box;
-	    float: left;
-	}
+    
+    .liquid-child {
+        width: 100%;
+        height: 100%;
     }
     
     .list {
 	overflow-y:scroll;
 	height: 100%;
+        width: 100%;
 	
 	a {
 	    display: block;
