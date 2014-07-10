@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Animations</title>
-    <meta name='description' content=''>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AnimationDemo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel='stylesheet' href='assets/app.css'>
-    <script src='assets/app.js'></script>
+    <base href="/" />
+
+    <link rel="stylesheet" href="assets/vendor-6b159f7e9769822156c83b66e600f030.css">
+    <link rel="stylesheet" href="assets/animation-demo-690e62d10266c622ad13dd4b6fbfb773.css">
   </head>
   <body>
-    <!--[if lt IE 8]>
-      <p class='browsehappy'>
-        You are using an <strong>outdated</strong> browser. Please
-        <a href='http://browsehappy.com/'>upgrade your browser</a>
-        to improve your experience.
-      </p>
-    <![endif]-->
-
     <script>
-      window.AnimationDemo = require('animation-demo/app')['default'].create();
+      window.AnimationDemoENV = {"environment":"production","baseURL":"/","locationType":"auto","EmberENV":{"FEATURES":{"query-param":true,"ember-routing-will-change-hooks":true}},"APP":{}};
+      window.EmberENV = window.AnimationDemoENV.EmberENV;
+    </script>
+    <script src="assets/vendor-7c9c304d9e5d6f9eea9627bda7a7f880.js"></script>
+    <script src="assets/animation-demo-cfd93d7b682577647d24847d8ce7e61c.js"></script>
+    <script>
+      window.AnimationDemo = require('animation-demo/app')['default'].create(AnimationDemoENV.APP);
     </script>
   </body>
 </html>
