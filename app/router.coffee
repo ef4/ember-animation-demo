@@ -13,4 +13,7 @@ Router.map ->
   @resource 'parent-child-transition', ->
     @route 'detail', {path: '/:id'}
 
+  @resource 'context-dependent-route-transition', ->
+    @route 'detail', {path: '/:id'}
+
 `export default Router`

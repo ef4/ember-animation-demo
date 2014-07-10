@@ -1,3 +1,5 @@
+import Person from "./models/person";
+
 export default function(){
   this.transition(
     this.between({childOf: '.time'}),
@@ -21,4 +23,22 @@ export default function(){
     this.toRoute('parent-child-transition.index'),
     this.use('toRight')
   );
+  this.transition(
+    this.fromContext({instanceOf: Person}),
+    this.toContext(higherPerson),
+    this.use('toLeft')
+  );
+  this.transition(
+    this.fromContext({instanceOf: Person}),
+    this.toContext(lowerPerson),
+    this.use('toRight')
+  );
+}
+
+function higherPerson(change){
+  return change.leaving.context.get('id') < change.entering.context.get('id');
+}
+
+function lowerPerson(change){
+  return change.leaving.context.get('id') > change.entering.context.get('id');
 }
