@@ -315,6 +315,11 @@ button.del {
     .buttons {
 	text-align: center;
     }
+    .compact {
+        position: relative;
+        min-width: 10em;
+        overflow: hidden;
+    }
 }
 
 #skydive-form {

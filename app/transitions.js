@@ -7,4 +7,8 @@ export default function(){
     this.between({childOf: '.mood'}),
     this.use('crossFade', {duration: 3000})
   );
+  this.transition(
+    this.between({class: 'demo-if'}),
+    this.use('toDown')
+  );
 }

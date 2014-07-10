@@ -10,8 +10,9 @@
     {{view Ember.Select value=vehicle content=vehicleChoices}}
   </div>
 
-  
-  {{#animated-if requiresLicense}}
+
+  {{#liquid-box measure="lastChild" class="compact"}}
+  {{#liquid-if requiresLicense class="demo-if"}}
     <div class="compact">
       <label>Driver's License Number</label>
       {{input value=licenseNum}}
@@ -24,7 +25,8 @@
     <div class="compact">
       <label class="checkbox">Would you like a helmet? {{input type="checkbox" checked=helmet}}</label>
     </div>
-  {{/animated-if}}
+  {{/liquid-if}}
+  {{/liquid-box}}
 
   <div class="clearfix"></div>
 
