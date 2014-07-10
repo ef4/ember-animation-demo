@@ -1,12 +1,10 @@
 export default function(){
   this.transition(
-    this.between(function(){ return /\d\d+/.test(this); }),
+    this.between({childOf: '.time'}),
     this.use('toDown')
   );
   this.transition(
-    this.between(function(change){
-      return typeof(this) === 'string' && this.length > 3;
-    }),
+    this.between({childOf: '.mood'}),
     this.use('crossFade', {duration: 3000})
   );
 }
