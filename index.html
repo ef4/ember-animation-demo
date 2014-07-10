@@ -9,16 +9,16 @@
 
     <base href="/ember-animation-demo/" />
 
-    <link rel="stylesheet" href="assets/vendor-6b159f7e9769822156c83b66e600f030.css">
-    <link rel="stylesheet" href="assets/animation-demo-690e62d10266c622ad13dd4b6fbfb773.css">
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/animation-demo.css">
   </head>
   <body>
     <script>
-      window.AnimationDemoENV = {"environment":"production","baseURL":"/ember-animation-demo","locationType":"auto","EmberENV":{"FEATURES":{"query-param":true,"ember-routing-will-change-hooks":true}},"APP":{}};
+      window.AnimationDemoENV = {"environment":"development","baseURL":"/ember-animation-demo","locationType":"auto","EmberENV":{"FEATURES":{"query-param":true,"ember-routing-will-change-hooks":true}},"APP":{"LOG_RESOLVER":true,"LOG_ACTIVE_GENERATION":true,"LOG_MODULE_RESOLVER":true,"LOG_VIEW_LOOKUPS":true},"LOG_MODULE_RESOLVER":true};
       window.EmberENV = window.AnimationDemoENV.EmberENV;
     </script>
-    <script src="assets/vendor-7c9c304d9e5d6f9eea9627bda7a7f880.js"></script>
-    <script src="assets/animation-demo-f5477bb2a95308748dc8ad847e8f14d0.js"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/animation-demo.js"></script>
     <script>
       window.AnimationDemo = require('animation-demo/app')['default'].create(AnimationDemoENV.APP);
     </script>
