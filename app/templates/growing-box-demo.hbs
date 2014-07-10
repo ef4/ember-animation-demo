@@ -3,21 +3,23 @@
 <h2>Welcome to Shady's Skydiving Service</h2>
 
 <label>Please list your next of kin... just in case.</label>
-  {{#growing-box}}
+  {{#liquid-box id="skydive-form"}}
     {{#each contacts}}
-      <div class="clearfix">
-	<div class="compact">
-	  <label>Name</label>
-	  {{input value=name delayedAutoFocus=focusIn}}
-	</div>
-	<div class="compact">
-	  <label>Phone</label>
-	  {{input value=phone}}
-	</div>
-	<button class="del" {{action "deleteContact" this}}>Delete</button>
+      <div class="contact">
+        <div class="clearfix">
+	  <div class="compact">
+	    <label>Name</label>
+	    {{input value=name delayedAutoFocus=focusIn}}
+	  </div>
+	  <div class="compact">
+	    <label>Phone</label>
+	    {{input value=phone}}
+	  </div>
+	  <button class="del" {{action "deleteContact" this}}>Delete</button>
+        </div>
       </div>
     {{/each}}
-  {{/growing-box}}
+  {{/liquid-box}}
 
 <div class="clearfix"></div>
 <button {{action "addContact"}}>Add Another</button>
