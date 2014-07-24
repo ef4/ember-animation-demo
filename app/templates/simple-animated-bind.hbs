@@ -1,3 +1,4 @@
+{{!- BEGIN-SNIPPET simple-animated-bind -}}
 <div id="now-demo">
 
     At <div class="time">{{liquid-bind hours}}</div>:
@@ -7,11 +8,10 @@
     my mood is 
 
     <div class="mood">
-      {{!- Using "as" with liquid-with depends on a bugfix in Ember, see https://github.com/emberjs/ember.js/pull/5115 -}}
       {{#liquid-with mood as mood}}
         <div {{bind-attr class="mood"}}>{{mood}}</div>
       {{/liquid-with}}
     </div>
 
 </div>
-
+{{!- END-SNIPPET -}}

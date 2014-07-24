@@ -6,6 +6,7 @@ slides = [
   "Physical Metaphors"
   "Momentum Example"
   "Simple Animated Bind"
+  "Animated Bind Source"
   "Measured Box Demo"
   "Growing Box Demo"
   "Animated If Demo"
