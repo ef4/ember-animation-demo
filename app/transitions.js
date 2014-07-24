@@ -2,15 +2,15 @@ import Person from "./models/person";
 
 export default function(){
   this.transition(
-    this.between({childOf: '.time'}),
+    this.childOf('.time'),
     this.use('toDown')
   );
   this.transition(
-    this.between({childOf: '.mood'}),
+    this.childOf('.mood'),
     this.use('crossFade', {duration: 3000})
   );
   this.transition(
-    this.between({class: 'demo-if'}),
+    this.hasClass('demo-if'),
     this.use('toDown')
   );
   this.transition(
@@ -24,21 +24,21 @@ export default function(){
     this.use('toRight')
   );
   this.transition(
-    this.fromContext({instanceOf: Person}),
-    this.toContext(higherPerson),
+    this.fromModel({instanceOf: Person}),
+    this.toModel(higherPerson),
     this.use('toLeft')
   );
   this.transition(
-    this.fromContext({instanceOf: Person}),
-    this.toContext(lowerPerson),
+    this.fromModel({instanceOf: Person}),
+    this.toModel(lowerPerson),
     this.use('toRight')
   );
 }
 
-function higherPerson(change){
-  return change.leaving.context.get('id') < change.entering.context.get('id');
+function higherPerson(otherPerson){
+  return this.get('id') > otherPerson.get('id');
 }
 
-function lowerPerson(change){
-  return change.leaving.context.get('id') > change.entering.context.get('id');
+function lowerPerson(otherPerson){
+  return this.get('id') < otherPerson.get('id');
 }
