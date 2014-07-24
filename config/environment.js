@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     environment: environment,
     baseURL: '/ember-animation-demo',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         'query-param': true,
@@ -19,6 +19,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.baseURL = '/';
     // LOG_MODULE_RESOLVER is needed for pre-1.6.0
     ENV.LOG_MODULE_RESOLVER = true;
 

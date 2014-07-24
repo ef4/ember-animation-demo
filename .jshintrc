@@ -2,7 +2,7 @@
   "predef": {
     "document": true,
     "window": true,
-    "SafeENV": true
+    "AnimationDemoENV": true
   },
   "browser" : true,
   "boss" : true,

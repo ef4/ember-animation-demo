@@ -2,6 +2,7 @@
 
 var Application = require('animation-demo/app')['default'];
 var Router = require('animation-demo/router')['default'];
+import Ember from 'ember';
 
 export default function startApp(attrs) {
   var App;

@@ -284,12 +284,8 @@ button.del {
     to { -webkit-transform: rotateX(-15deg)rotateY(360deg); }
 }
 
-.CodeRay {
-    font-size: 2em;
-    border: 1px solid $secondary;
-    @extend .curvy;
-    background-color: $bghighlight;
-    padding: 0 0.5em;
+pre.hljs {
+    font-size: 24px;
 }
 
 #animated-if-demo {
