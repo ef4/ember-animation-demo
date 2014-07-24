@@ -1,37 +1,24 @@
-<div id="animated-if-demo">
+<div>
 
-  <div class="row">
-    <label>Name</label>
-    {{input value=name}}
-  </div>
+{{!- BEGIN-SNIPPET animated-if-demo -}}
+<div id="liquid-box-demo">
+  <label>I'm renting a </label>
+  {{view Ember.Select value=vehicle content=vehicles}}
 
-  <div class="compact">
-    <label style="min-width: 10em">Vehicle to Rent</label>
-    {{view Ember.Select value=vehicle content=vehicleChoices}}
-  </div>
-
-
-  {{#liquid-box measure="lastChild" class="compact"}}
-  {{#liquid-if requiresLicense class="demo-if"}}
-    <div class="compact">
-      <label>Driver's License Number</label>
-      {{input value=licenseNum}}
-    </div>
-    <div class="compact">
-      <label>Driver's License State</label>
+  {{#liquid-box measure="lastChild"}}
+    {{#liquid-if isBike class="vehicles"}}
+      <label>
+        Would you like a helmet? {{input type="checkbox" value="helmet"}}
+      </label>
+    {{else}}
+      <label>License Number</label>
+      {{input type="text" value=license}}
+      <label>License State</label>
       {{view Ember.Select value=state content=states}}
-    </div>
-  {{else}}
-    <div class="compact">
-      <label class="checkbox">Would you like a helmet? {{input type="checkbox" checked=helmet}}</label>
-    </div>
-  {{/liquid-if}}
+    {{/liquid-if}}
   {{/liquid-box}}
-
-  <div class="clearfix"></div>
-
-  <div class="row buttons">
-    <button>Let's Go</button>
-  </div>
+  <button type="button" class="btn btn-success">Yay, let's go!</button>
+</div>
+{{!- END-SNIPPET -}}
 
 </div>

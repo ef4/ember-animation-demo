@@ -8,10 +8,15 @@ slides = [
   "Simple Animated Bind"
   "Animated Bind Source"
   "Measured Box Demo"
+  "Measured Box Source"
   "Growing Box Demo"
+  "Growing Box Source"
   "Animated If Demo"
-  {title: "Parent Child Transition", autoRoute: false}
+  "Animated If Source"
+  {title: "Route Transition", autoRoute: false}
+  "Route Transition Source"
   {title: "Context Dependent Route Transition", autoRoute: false}
+  "Context Dependent Source"
   {title: "Modal Demo", route: "modal-launcher"}
 ]
 

@@ -10,7 +10,7 @@ Router.map ->
 
   # any slides with more complicated needs have autoRoute==false, and
   # we set them up manually here:
-  @resource 'parent-child-transition', ->
+  @resource 'route-transition', ->
     @route 'detail', {path: '/:id'}
 
   @resource 'context-dependent-route-transition', ->

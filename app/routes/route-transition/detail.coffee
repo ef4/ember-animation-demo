@@ -6,7 +6,7 @@ R = Ember.Route.extend
     SampleItem.find(params.id)
 
   actions:
-    back: -> @transitionTo 'parent-child-transition'
+    back: -> @transitionTo 'route-transition'
 
 
 `export default R`

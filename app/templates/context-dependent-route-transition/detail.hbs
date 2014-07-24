@@ -1,9 +1,9 @@
-{{#liquid-with model}}
-
-  <button {{action "decrement"}}>Decrement</button>
-
-  This is person number {{id}}.
-
-  <button {{action "increment"}}>Increment</button>
-
-{{/liquid-with}}
+{{!- BEGIN-SNIPPET context-dependent-demo -}}
+<div id="context-dependent-demo">
+  {{#liquid-with model}}
+    <button {{action "decrement"}}>Decrement</button>
+    This is person number {{id}}.
+    <button {{action "increment"}}>Increment</button>
+  {{/liquid-with}}
+</div>
+{{!- END-SNIPPET -}}

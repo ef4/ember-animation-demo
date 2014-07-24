@@ -286,27 +286,32 @@ button.del {
 
 pre.hljs {
     font-size: 24px;
+    border: 1px solid #777;
+    border-radius: 3px;
 }
 
-#animated-if-demo {
-    border: 1px solid $secondary;
-    @extend .curvy;
-    background-color: $pale_cyan;
-    padding: 0 0.5em;
-    min-width: 30em;
-    select {
-	display: inline-block;
+pre.hljs + pre.hljs {
+    margin-top: 1.5em;
+}
+
+#liquid-box-demo {
+    border: 1px solid #AA6F39;
+    background: #FFD3AA;
+    width: 20em;
+    border-radius: 3px;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+    input, select {
+        margin-bottom: 1.5em;
+        display: inline-block;
     }
-    .checkbox input {
-	display: inline;
+    label {
+        display: inline-block;
+        font-weight: bold;
+        color: #333;
     }
-    .buttons {
-	text-align: center;
-    }
-    .compact {
-        position: relative;
-        min-width: 10em;
-        overflow: hidden;
+    .vehicles {
+        width: 100%;
     }
 }
 
@@ -317,3 +322,18 @@ pre.hljs {
     }
 }
 
+
+#context-dependent-demo {
+    width: 40em;
+    height: 10em;
+    border: 1px solid #333;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+    text-align: center;
+    > div {
+        width: 100%;
+        margin-top: 3em;
+    }
+}
