@@ -12,17 +12,6 @@ C = Ember.ArrayController.extend
     if nextSlide
       @transitionToRoute(nextSlide.get('route'))
 
-  showingModalDemo: ((k,v)->
-    return v if arguments.length > 1
-    if not @get('modalDemo') and (mp = $('.modal-popup')).length > 0 and not mp.is('.away')
-      mp.addClass('away')
-      mp.one 'webkitAnimationEnd', => @set('showingModalDemo', false)
-      true
-    else
-      @get('modalDemo')
-  ).property('modalDemo')
-
-
   actions:
     nextSlide: -> @jumpSlides(1)
     previousSlide: -> @jumpSlides(-1)

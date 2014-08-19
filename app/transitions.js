@@ -58,4 +58,15 @@ export default function(){
   );
   // END-SNIPPET
 
+  this.transition(
+    this.hasClass('liquid-modal'),
+    this.toModel(function(){ return this; }),
+    this.use('revealModal')
+  );
+
+  this.transition(
+    this.hasClass('liquid-modal'),
+    this.toModel(function(){ return !this; }),
+    this.use('hideModal')
+  );
 }
