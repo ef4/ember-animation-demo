@@ -1,9 +1,9 @@
 {{!- BEGIN-SNIPPET context-dependent-demo -}}
-<div id="context-dependent-demo">
-  {{#liquid-with model}}
+
+{{#liquid-with model class="context-dependent-demo"}}
     <button {{action "decrement"}}>Decrement</button>
     This is person number {{id}}.
     <button {{action "increment"}}>Increment</button>
-  {{/liquid-with}}
+{{/liquid-with}}
 </div>
 {{!- END-SNIPPET -}}

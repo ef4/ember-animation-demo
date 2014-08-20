@@ -323,17 +323,15 @@ pre.hljs + pre.hljs {
 }
 
 
-#context-dependent-demo {
+.context-dependent-demo {
     width: 40em;
     height: 10em;
     border: 1px solid #333;
-    overflow: hidden;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    transform: translateZ(0);
     text-align: center;
     > div {
         width: 100%;
-        margin-top: 3em;
+        height: 100%;
+        padding-top: 3em;
+        box-sizing: border-box;
     }
 }
